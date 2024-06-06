@@ -11,8 +11,8 @@
     <img src="logo.png" alt="Logo">
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="youtube.html">YouTube</a></li>
+        <li><a href="#index">Home</a></li>
+        <li><a href="#youtube">YouTube</a></li>
         <li><a href="spotify.html">Spotify</a></li>
         <li><a href="services.html">Services</a></li>
       </ul>
@@ -24,6 +24,13 @@
     <p>(0.7 beta)</p>
     <br><br>
     <h4>Your Gray Servitor bot is currently in development, so this page will currently remain empty...</h4>
+  </main>
+    <main>
+    <h1>YouTube Player</h1>
+    <div id="player"></div>
+    <input type="text" id="videoId" placeholder="Enter the video ID">
+    <button onclick="loadVideo()">Load video</button>
+    <div id="history"></div>
   </main>
   <footer>
     <p>© 2024 Discode Studio</p>
