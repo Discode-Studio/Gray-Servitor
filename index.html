@@ -8,57 +8,68 @@
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="LOGO">
+    <img src="logo.png" alt="LOGO"> <h1>Gray Servitor</h1>
   </header>
   <main>
     <h1>Welcome to Gray Servitor</h1>
-    <p>You'r magic bot multifunction.</p>
+    <p>Your magic bot multifunction.</p>
     <p>The new safety place of a bot - V2.0</p>
     <br>
-    <h4>Your Gray Servitor bot is currently in development, so this page will currently remain empty...</h4> <br>
+    <h4>Your Gray Servitor bot is currently in development, so this page will currently remain empty...</h4>
+    <br>
     <h1>All bot commands</h1>
     <ul>
-      <p>
-        - g!help | /help - Basic help command<br>
-        - /say [content] - Moderator commands, used to speak with the bot...<br>
-        - g!ping - see the bot ping<br>
-        - g!info - see information about the bot and skibidi toilet<br>
-        - g!skibidi - post the skibidi song lyrics
-        - /ticket - Open a ticket <br>
-        - /close - Close a ticket
-      </p>
+      <li>g!help | /help - Basic help command</li>
+      <li>/say [content] - Moderator commands, used to speak with the bot...</li>
+      <li>g!ping - see the bot ping</li>
+      <li>g!info - see information about the bot and skibidi toilet</li>
+      <li>g!skibidi - post the skibidi song lyrics</li>
+      <li>/ticket - Open a ticket</li>
+      <li>/close - Close a ticket</li>
     </ul>
   </main>
   <br>
-  <secondary>
+  <section>
     <h1>Skibidi Toilet 75</h1>
     <p>Approximate date: 06/15/24 - 06/25/24</p>
     <br>
     <h1>Skibidi Toilet Season 25</h1>
     <p>Approximate date: 07/25/24 - 09/30/24</p>
-  </secondary>
+  </section>
   <br>
-    <main>
+  <main>
     <h1>Our services and credits</h1>
-    <p>Developped by MirossOffYT and BlugrayGuy.</p>
+    <p>Developed by MirossOffYT and BlugrayGuy.</p>
     <p>Owned by Discode Studio.</p>
   </main>
-  <footer>
+  <div id="rulesPanel">
+    <div id="rulesContent">
+      <h2>Information</h2>
+      <p>Please keep on mind that app is in beta version, any bug and issues will be fix on the definitive version...</p>
     <p>© 2024 Discode Studio</p>
-  </footer>
+    </div>
+  </div>
   <script src="script.js"></script>
   <script src="server.js"></script>
-</body>
   <script>
-    static void UpdatePresence()
-{
-    DiscordRichPresence discordPresence;
-    memset(&discordPresence, 0, sizeof(discordPresence));
-    discordPresence.details = "Browse";
-    discordPresence.largeImageKey = "embedded_cover";
-    discordPresence.smallImageKey = "embedded_logo";
-    discordPresence.partyId = "ae488379-351d-4a4f-ad32-2b9b01c91657";
-    Discord_UpdatePresence(&discordPresence);
-}
+    function updatePresence() {
+      const Discord = require('discord-rpc');
+      const clientId = '1193227493386223666';
+
+      Discord.initialize(clientId);
+
+      const presence = {
+        details: 'Browsing',
+        largeImageKey: 'embedded_cover',
+        smallImageKey: 'embedded_logo',
+        partyId: 'ae488379-351d-4a4f-ad32-2b9b01c91657',
+        instance: false,
+      };
+
+      Discord.setActivity(presence);
+    }
+
+    updatePresence();
   </script>
+</body>
 </html>
