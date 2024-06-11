@@ -2,14 +2,32 @@ body {
   font-family: Arial, sans-serif;
   background-color: #2c2f33;
   color: #ffffff;
-  text-align: center;
+  text-align: left;
   margin: 0;
   padding: 0;
+  background-image: url('pc_img.png'); /* Default background for PC */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 568px) {
+  body {
+    background-image: url('mobile_img.png'); /* Background for mobile */
+  }
 }
 
 header {
-  background-color: #23272a;
+  background-color: #5865F2;
   padding: 10px 0;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+#headerh {
+  text-align: right;
+  display: flex;
+  align-items: center;
 }
 
 header img {
@@ -19,6 +37,7 @@ header img {
 nav ul {
   list-style-type: none;
   padding: 0;
+  text-align: center;
 }
 
 nav ul li {
@@ -31,10 +50,62 @@ nav ul li a {
   text-decoration: none;
 }
 
+main, section {
+  padding: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
 footer {
   background-color: #23272a;
   padding: 10px 0;
   position: fixed;
   width: 100%;
   bottom: 0;
+  text-align: center;
+}
+
+/* Ajoute des contours noirs au texte */
+h1, h2, h3, h4, h5, h6, p, ul, li {
+  text-shadow: 1px 1px 2px #000, 0 0 1em #000;
+}
+
+/* Styles for the rules panel */
+#rulesPanel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 30, 0.8); /* Fond semi-transparent bleu nuit */
+  transition: height 0.3s ease;
+}
+
+#rulesContent {
+  padding: 20px;
+}
+
+#togglePanel {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#togglePanel:hover {
+  background-color: #1257a4;
+}
+
+#rulesPanel.open {
+  height: 300px; /* Taille de la barre inférieure ouverte */
 }
