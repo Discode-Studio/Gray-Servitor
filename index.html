@@ -49,4 +49,16 @@
   <script src="script.js"></script>
   <script src="server.js"></script>
 </body>
+  <script>
+    static void UpdatePresence()
+{
+    DiscordRichPresence discordPresence;
+    memset(&discordPresence, 0, sizeof(discordPresence));
+    discordPresence.details = "Browse";
+    discordPresence.largeImageKey = "embedded_cover";
+    discordPresence.smallImageKey = "embedded_logo";
+    discordPresence.partyId = "ae488379-351d-4a4f-ad32-2b9b01c91657";
+    Discord_UpdatePresence(&discordPresence);
+}
+  </script>
 </html>
